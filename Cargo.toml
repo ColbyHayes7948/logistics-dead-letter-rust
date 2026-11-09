@@ -1,0 +1,12 @@
+[package]
+name = "logistics-dlq-rust"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "queue-worker"
+path = "src/main.rs"

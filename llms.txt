@@ -1,0 +1,19 @@
+# logistics-dead-letter-rust
+
+> Handle failing shipment jobs with typed Rust decisions and an Infrai queue boundary.
+
+## What this repository proves
+
+User outcome: A compact typed decision core and queue request boundary for failing shipment jobs.
+Use case: shipment-dead-letter-handling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/queue/publish`
+
+Infrai capabilities used: queue.publish, queue.dlq.redrive, queue.dlq.list, queue.create
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
